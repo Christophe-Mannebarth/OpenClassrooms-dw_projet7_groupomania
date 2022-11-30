@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "6385e79a6fc996c002255a44"
+  },
+  "userId": "6364f8409fe0a88b11b25c6a",
+  "author": "Bob",
+  "title": "Plein les yeux!!",
+  "postContent": "Hé les gars! matez un peu mon nouveau jouet! A l'étage de la compta ils vont faire des bonds!!",
+  "imageUrl": "http://localhost:8000/images/tron_light_1669722737017.jpg",
+  "likes": 1,
+  "dislikes": 1,
+  "usersLiked": [
+    "Bob"
+  ],
+  "usersDisliked": [
+    "Patrick"
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6385e82e6fc996c002255a4d"
+  },
+  "userId": "6376c70ca3368fd8c4171874",
+  "author": "Patrick",
+  "title": "Neauveau design!!",
+  "postContent": "Voici le nouveau design pour le département gaming! Qu'en pensez-vous? Cool ou cool? La dead line est prevue pour vendredi va falloir faire fissa!",
+  "imageUrl": "http://localhost:8000/images/wallpaper_aorus_gigabyte_logo_4k_hi-tech_673313476_1669720110128.jpg",
+  "likes": 2,
+  "dislikes": 0,
+  "usersLiked": [
+    "Patrick",
+    "Bob"
+  ],
+  "usersDisliked": [],
+  "__v": 0
+}]
