@@ -2,10 +2,6 @@
 import jwt from 'jsonwebtoken'
 import { Request, Response, NextFunction } from 'express'
 
-// TYPE DECLARATION
-//interface ReqWithAuth extends Request {
-//   auth: any
-// }
 // EXPORT OF BUSINESS LOGIC CONCERNING AUTHENTICATION
 /**
  * Extracts the token from the Authorization header of the incoming request.
@@ -26,14 +22,12 @@ import { Request, Response, NextFunction } from 'express'
 export default (req: Request, res: Response, next: NextFunction) => {
   try {
     const token = req.headers.authorization!.split(' ')[1]
-    const isAdmin = req.headers.authorization!.split(' ')[2]
     const tokenKey = process.env.TOKEN_KEY
     const decodedToken = jwt.verify(token, tokenKey!) as jwt.JwtPayload
     const userId = decodedToken.userId
     //@ts-ignore
     req.auth = {
       userId: userId,
-      isAdmin: isAdmin,
     }
     next()
   } catch (error) {
