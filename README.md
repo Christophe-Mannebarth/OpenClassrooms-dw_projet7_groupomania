@@ -23,7 +23,8 @@
    1. [Dependencies](#dependencies-1)
    2. [Preparations](#preparations)
    3. [Install & Start](#install--start-1)
-   4. [Notice](#to-note-1)
+   4. [API endpoints](#api-endpoints)
+   5. [Notice](#to-note-1)
 8. [Thanks](#thanks)
 
 ## **Introduction:**
@@ -239,6 +240,17 @@ npm i
 
 npm start
 ```
+
+### **API Endpoints**
+
+   Signup        ==> POST /api/auth/signup
+   Login         ==> POST /api/auth/login
+   Get all posts ==> GET /api/posts
+   Get one post  ==> GET /api/posts/:id
+   Create post   ==> POST /api/posts
+   Updtate post  ==> PUT /api/posts/:id 
+   Delete post   ==> DELETE /api/posts/:id
+   Like/Dislike  ==> POST /api/posts/:id/like
 
 ### **To note**
 
