@@ -243,14 +243,14 @@ npm start
 
 ### **API Endpoints**
 
-   Signup        ==> POST /api/auth/signup
-   Login         ==> POST /api/auth/login
-   Get all posts ==> GET /api/posts
-   Get one post  ==> GET /api/posts/:id
-   Create post   ==> POST /api/posts
-   Updtate post  ==> PUT /api/posts/:id 
-   Delete post   ==> DELETE /api/posts/:id
-   Like/Dislike  ==> POST /api/posts/:id/like
+      Signup        ==> POST /api/auth/signup
+      Login         ==> POST /api/auth/login
+      Get all posts ==> GET /api/posts
+      Get one post  ==> GET /api/posts/:id
+      Create post   ==> POST /api/posts
+      Updtate post  ==> PUT /api/posts/:id 
+      Delete post   ==> DELETE /api/posts/:id
+      Like/Dislike  ==> POST /api/posts/:id/like
 
 ### **To note**
 
