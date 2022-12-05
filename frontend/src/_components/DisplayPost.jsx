@@ -47,7 +47,7 @@ export const DisplayPost = () => {
 
   const dispatch = useDispatch()
 
-  // If there is data cerning the post content in the global state:
+  // If there is data concerning the post content in the global state:
   if (data) {
     const authUserId = authUser.userId
     const isAdmin = authUser.isAdmin
@@ -60,7 +60,7 @@ export const DisplayPost = () => {
     /*--------------------------- DELETE -----------------------------*/
 
     /* Delete post*/
-    // Dispatch action deletePost when the delete button is clicked
+    // Dispatch action deletePost() when the delete button is clicked
     const deletion = async () => {
       await dispatch(postsActions.deletePost({ postId }))
     }
@@ -71,7 +71,7 @@ export const DisplayPost = () => {
       // If the user has not already liked the post ...
       if (!isLiked) {
         // ... in case he did not already dislike:
-        // give 1 as a value to like for the likepost function
+        // give 1 as a value to like for the likePost() function
         if (!isDisliked) {
           try {
             await dispatch(postsActions.likePost({ postId, like: 1 }))
@@ -80,8 +80,8 @@ export const DisplayPost = () => {
           }
 
           // ... in the event that he has already disliked the post:
-          // gives 0 as value to like for the dislikepost function
-          // give 1 as a value to like for the likepost function
+          // gives 0 as value to like for the dislikePost() function
+          // give 1 as a value to like for the likePost() function
         } else {
           try {
             await dispatch(postsActions.dislikePost({ postId, like: 0 }))
@@ -92,7 +92,7 @@ export const DisplayPost = () => {
         }
 
         // Otherwise it is that the user in already like the post
-        // gives 0 as value to like for the likepost function
+        // gives 0 as value to like for the likePost() function
       } else {
         try {
           await dispatch(postsActions.likePost({ postId, like: 0 }))
@@ -144,7 +144,7 @@ export const DisplayPost = () => {
       // If the user has not already disliked the post ...
       if (!isDisliked) {
         // ... in the event that he did not already like:
-        // gives -1 as a value to Like for the Dislikepost function
+        // gives -1 as a value to Like for the dislikePost() function
         if (!isLiked) {
           try {
             await dispatch(postsActions.dislikePost({ postId, like: -1 }))
@@ -153,8 +153,8 @@ export const DisplayPost = () => {
           }
 
           // ... in the event that he has already liked the post:
-          // gives 0 as a value to like for the likepost
-          // gives -1 as a value to Like for the Dislikepost function
+          // gives 0 as a value to like for the likePost()
+          // gives -1 as a value to Like for the dislikePost() function
         } else {
           try {
             await dispatch(postsActions.likePost({ postId, like: 0 }))
@@ -164,7 +164,7 @@ export const DisplayPost = () => {
           }
         }
         // Otherwise it is that the user has already disliked the post
-        // gives 0 as value to like for the dislikePost function
+        // gives 0 as value to like for the dislikePost() function
       } else {
         try {
           await dispatch(postsActions.dislikePost({ postId, like: 0 }))
@@ -302,7 +302,7 @@ export const DisplayPost = () => {
       </>
     )
     // if there is no data in the global state
-    // data will be loaded with the getPost function in the Post page
+    // data will be loaded with the getPost() function in the Post page
   } else {
     return
   }

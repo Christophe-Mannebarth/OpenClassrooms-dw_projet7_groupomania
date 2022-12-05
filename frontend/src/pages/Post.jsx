@@ -30,7 +30,6 @@ function Post() {
   const likeOneError = useSelector(selectLikeOneError)
   const dislikeOneError = useSelector(selectDislikeOneError)
   const isLoading = useSelector(selectGetOneIsLoading)
-  // const data = useSelector(selectGetOneContent)
 
   // Recover the post ID in the address bar
   const { id: postId } = useParams()
@@ -80,7 +79,7 @@ function Post() {
   // if the request is in progress, display the loader
   // Call the DisplayPost Component to display the post
   // The presence of data in the global state will be verified
-  // and in case of absence the getPost function will be launched
+  // and in case of absence the getPost() function will be launched
   // to recover it in the database
   if (isLoading) {
     return (
