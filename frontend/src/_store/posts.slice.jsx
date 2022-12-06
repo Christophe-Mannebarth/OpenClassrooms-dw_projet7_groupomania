@@ -180,7 +180,7 @@ function createExtraReducers() {
   }
 
   function createPost() {
-    var { pending, fulfilled, rejected } = extraActions.createPost
+    const { pending, fulfilled, rejected } = extraActions.createPost
     return {
       [pending]: (state) => {
         state.createOne = { error: null }
@@ -195,7 +195,7 @@ function createExtraReducers() {
   }
 
   function getAllPosts() {
-    var { pending, fulfilled, rejected } = extraActions.getAllPosts
+    const { pending, fulfilled, rejected } = extraActions.getAllPosts
     return {
       [pending]: (state) => {
         state.getAll = { isLoading: true }
@@ -214,7 +214,7 @@ function createExtraReducers() {
   }
 
   function getOnePost() {
-    var { pending, fulfilled, rejected } = extraActions.getOnePost
+    const { pending, fulfilled, rejected } = extraActions.getOnePost
     return {
       [pending]: (state) => {
         state.getOne = { isLoading: true }
@@ -239,7 +239,7 @@ function createExtraReducers() {
   }
 
   function deletePost() {
-    var { pending, fulfilled, rejected } = extraActions.deletePost
+    const { pending, fulfilled, rejected } = extraActions.deletePost
     return {
       [pending]: (state) => {
         state.deleteOne = { error: null }
@@ -255,7 +255,7 @@ function createExtraReducers() {
   }
 
   function updatePost() {
-    var { pending, fulfilled, rejected } = extraActions.updatePost
+    const { pending, fulfilled, rejected } = extraActions.updatePost
     return {
       [pending]: (state) => {
         state.updateOne = { error: null }
@@ -273,7 +273,7 @@ function createExtraReducers() {
   }
 
   function likePost() {
-    var { pending, fulfilled, rejected } = extraActions.likePost
+    const { pending, fulfilled, rejected } = extraActions.likePost
     return {
       [pending]: (state) => {
         state.likeOne = { error: null }
@@ -292,7 +292,7 @@ function createExtraReducers() {
   }
 
   function dislikePost() {
-    var { pending, fulfilled, rejected } = extraActions.dislikePost
+    const { pending, fulfilled, rejected } = extraActions.dislikePost
     return {
       [pending]: (state) => {
         state.dislikeOne = { error: null }

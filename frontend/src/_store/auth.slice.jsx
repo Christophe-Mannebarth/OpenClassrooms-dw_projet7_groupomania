@@ -84,7 +84,7 @@ function createExtraReducers() {
   }
 
   function login() {
-    var { pending, fulfilled, rejected } = extraActions.login
+    const { pending, fulfilled, rejected } = extraActions.login
     return {
       [pending]: (state) => {
         state.error = null
@@ -101,7 +101,7 @@ function createExtraReducers() {
   }
 
   function signup() {
-    var { pending, fulfilled, rejected } = extraActions.signup
+    const { pending, fulfilled, rejected } = extraActions.signup
     return {
       [pending]: (state) => {
         state.error = null
